@@ -2,13 +2,13 @@ package algo_2_sort
 
 fun mergesort(a: IntArray, L: Int, R: Int) {
     if (L < R) {
-        val _M: Int = (L + R) / 2
-        println("L = $L, M = $_M, R = $R")
+        val M: Int = (L + R) / 2
+        println("L = $L, M = $M, R = $R")
 
-        mergesort(a, L, _M)
-        mergesort(a, _M + 1, R)
-        merge(a, L, _M, R)
-        println(a.joinToString(","))
+        mergesort(a, L, M)
+        mergesort(a, M + 1, R)
+        merge(a, L, M, R)
+        println("=> " + a.joinToString(","))
     }
 }
 
@@ -16,7 +16,7 @@ fun merge(a: IntArray, L: Int, M: Int, R: Int) {
     var left: Int = L
     var right: Int = M + 1
     var i = L
-    val tmp = IntArray(8)
+    val tmp = IntArray(a.size)
 
     while ((left <= M) && (right <= R)) {
         if (a[left] < a[right]){
@@ -38,10 +38,9 @@ fun merge(a: IntArray, L: Int, M: Int, R: Int) {
         i++; right++
     }
 
-    for (j in L until R) {
+    for (j in L until (R + 1)) {
         a[j] = tmp[j]
     }
-
 }
 
 fun main() {
