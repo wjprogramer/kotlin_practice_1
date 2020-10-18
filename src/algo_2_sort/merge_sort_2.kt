@@ -1,5 +1,6 @@
 package algo_2_sort
 
+// https://chercher.tech/kotlin/merge-sort-kotlin
 fun mergeSort(list: List<Int>): List<Int> {
     if (list.size <= 1) {
         return list

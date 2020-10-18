@@ -22,16 +22,41 @@ fun for3() {
     }
     println()
 
-    for (i in 0 until 5) {
+    for (i in 0 until 5 step 2) {
         print(i)
     }
     println()
 
+    for (i in 0.rangeTo(3)) {
+        print(i)
+    }
+    println()
+
+    /// -----------------
+    10.downTo(0)
+
+    for (i in 9 downTo 2) {
+        print("")
+    }
+
+    f1@for (i in 0..8) {
+        f2@for (j in 0..1) {
+           continue@f1
+        }
+    }
+
+    fun localFunction() {
+        fun localFunction2() {
+
+        }
+        localFunction2()
+    }
+    localFunction()
 }
 
 fun main() {
     while(true) {
-        println("Type number:")
+        println(message = "Type number:")
         val option = readLine()
 
         when(option?.toInt()) {
