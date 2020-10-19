@@ -8,6 +8,7 @@ import kotlin.system.exitProcess
 fun run1() {
     val whatsMyName = "Francis"
     run {
+        // NAME_SHADOWED
         val whatsMyName = "Ajax"
         println("Call my name! $whatsMyName")
     }
@@ -35,8 +36,7 @@ fun run2() {
 fun main() {
     while(true) {
         print("Type number: ")
-        val option = readLine()
-        if (option == null || option.isEmpty()) exitProcess(1)
+        val option = readLine() ?: exitProcess(1)
         println("======")
 
         when(option.toInt()) {

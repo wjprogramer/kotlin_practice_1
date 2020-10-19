@@ -36,7 +36,7 @@ fun main() {
     while(true) {
         print("Type number: ")
         val option = readLine()
-        if (option == null || option.isEmpty()) exitProcess(1)
+        if (option == null || option.isEmpty) exitProcess(1)
         println("======")
 
         when(option.toInt()) {

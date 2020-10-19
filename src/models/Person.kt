@@ -1,6 +1,6 @@
 package models
 
-class Person(val id: Int, val firstName: String, val lastName: String) {
+class Person(var id: Int, var firstName: String, var lastName: String) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return  false
