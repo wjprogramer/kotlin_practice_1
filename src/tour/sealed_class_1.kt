@@ -89,12 +89,6 @@ fun machineStatePrinting(workingState: WorkingState) {
 }
 /** endregion */
 
-/** region */
-/** endregion */
-
-/** region */
-/** endregion */
-
 fun main() {
     while(true) {
         print("Type number: ")
