@@ -1,7 +1,7 @@
-package algo_strategy
+package algo_paradigm
 
 // ex 1 階乘
-fun factorial(n: Int): Int {
+private fun factorial(n: Int): Int {
     return if (n == 1) {
         1
     } else {
@@ -11,7 +11,7 @@ fun factorial(n: Int): Int {
 
 // ex 2
 // 輸出 a 的 b 次方除以 1234 的餘數。。
-fun power(a: Int, b: Int): Int {
+private fun power(a: Int, b: Int): Int {
     return when {
         b == 0 -> {
             1
@@ -30,9 +30,6 @@ fun power(a: Int, b: Int): Int {
 }
 
 // ex 3 mergeSort (請參閱 merge_sort.kt)
-
-
-
 
 fun main() {
 

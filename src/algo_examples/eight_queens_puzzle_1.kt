@@ -1,4 +1,4 @@
-package algo_1
+package algo_examples
 
 const val SIZE = 8
 

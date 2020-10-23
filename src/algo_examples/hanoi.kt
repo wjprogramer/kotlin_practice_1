@@ -1,4 +1,4 @@
-package algo_1
+package algo_examples
 
 fun hanoi(n: Int, src: Char, aux: Char, dst: Char) {
     if (n == 1) {

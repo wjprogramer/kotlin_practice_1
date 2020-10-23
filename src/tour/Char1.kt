@@ -4,6 +4,8 @@ import kotlin.system.exitProcess
 
 fun char1() {
     println('a'.toInt()) // 97
+    println('A'.toInt()) // 65
+    println('Z'.toInt()) // 90
     println('z' - 'a') // 25
 
     val ca = charArrayOf('a', 'b').joinToString("")
@@ -18,10 +20,6 @@ fun char1() {
     println((10 + 96).toChar()) // j
     println(Integer.parseInt("1") * 2) // 2
     println('1'.toInt()) // 49
-
-
-
-
 }
 
 

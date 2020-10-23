@@ -136,6 +136,16 @@ fun bit3() {
 
 }
 
+fun bit4() {
+    val a = 0b00000000_00000000_00000000_00000010
+
+    println(a.toString(2))
+    println(a.inv().toString(2))
+    println((-(a.inv())).toString(2))
+
+    println(Integer.parseInt("00000000000000000000000000000010", 2))
+}
+
 fun main() {
     while(true) {
         print("Type number: ")
@@ -147,9 +157,12 @@ fun main() {
             1 -> bit1()
             2 -> bit2()
             3 -> bit3()
+            4 -> bit4()
             else -> exitProcess(1)
         }
 
         println("======")
+
+//        println(0b11010010_01101001_10010100_10010010)
     }
 }

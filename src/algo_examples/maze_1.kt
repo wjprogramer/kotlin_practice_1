@@ -1,4 +1,4 @@
-package algo_1
+package algo_examples
 
 class Maze1 {
     class Point(var x: Int, var y: Int)
