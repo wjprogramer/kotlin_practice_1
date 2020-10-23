@@ -4,11 +4,11 @@ fun countPrimes(n: Int): Int {
     var count = 0
     val signs = BooleanArray(n) { false }
 
-    for (i in 2..n) {
+    for (i in 2 until n) {
         if (!signs[i - 1]) {
             count++
 
-            for (j in (i*i)..n step i) {
+            for (j in i until n step i) {
                 signs[j - 1] = true
             }
         }
@@ -16,6 +16,8 @@ fun countPrimes(n: Int): Int {
 
     return count
 }
+
+
 
 fun main() {
     println("countPrimes(0): ${countPrimes(0)}")
