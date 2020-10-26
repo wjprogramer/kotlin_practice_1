@@ -26,4 +26,8 @@ class Person(var id: Int, var firstName: String, var lastName: String) {
     operator fun invoke() {
         println("Invoke Person($id)")
     }
+
+    override fun toString(): String {
+        return "$id. $firstName $lastName"
+    }
 }
