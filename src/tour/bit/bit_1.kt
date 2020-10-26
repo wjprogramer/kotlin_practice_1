@@ -5,7 +5,7 @@ import kotlin.system.exitProcess
 
 // Bitwise Operation
 
-fun bit1() {
+private fun bit1() {
 //    1. or
 //    12 = 00001100 (In Binary)
 //    25 = 00011001 (In Binary)
@@ -105,7 +105,7 @@ fun bit1() {
 //    The 2's complement of 2147483645 is 3.
 }
 
-fun bit2() {
+private fun bit2() {
     println(257.toByte())
     println(256.toByte())
     println(255.toByte())
@@ -124,7 +124,7 @@ fun bit2() {
     println(4.toByte())
 }
 
-fun bit3() {
+private fun bit3() {
     val max = Int.MAX_VALUE
     println(max)                        // 2147483647
     println(max.toString(2))
@@ -136,7 +136,7 @@ fun bit3() {
 
 }
 
-fun bit4() {
+private fun bit4() {
     val a = 0b00000000_00000000_00000000_00000010
 
     println(a.toString(2))
