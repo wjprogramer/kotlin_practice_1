@@ -35,6 +35,17 @@ fun range3() {
     }
 }
 
+fun range4() {
+    1 in 1..3
+    (1..3).toList()
+    1 in 3 downTo 1
+    1 in 1 until 3
+    3 in 1 until 3
+    2 in 1..3
+    2 !in 1..3
+    'x' in 'a'..'z'
+}
+
 fun main() {
     while(true) {
         print("Type number: ")

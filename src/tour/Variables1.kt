@@ -2,6 +2,21 @@ package tour
 
 val PI = 3.14
 
+/**
+ * 區域變數初始化時可不用給值（檔案層級變數不行）
+ * 只要使用該變數前要有值就好
+ */
+private fun variable1() {
+    val name: String
+
+    val firstName: String
+    firstName = "Hello"
+
+    var number: Int
+    number = 1
+    number += 1
+}
+
 /*
     Variables Demo
  */

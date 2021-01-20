@@ -1,6 +1,9 @@
 package tour
 
+import kotlin.random.Random.Default.nextBoolean
 import kotlin.system.exitProcess
+
+// 只要有 if else 都建議用 when
 
 fun when11(obj: Any): String =
     when (obj) {
@@ -34,6 +37,18 @@ fun when12() {
             "I guess Pumpkin Pie"    // <-- final line return
         }
         else -> "Whatever pie"
+    }
+
+    // #3
+
+    val n = when (val number = (1..7).random()) {
+        in 1..3 -> "in 1~3"
+        4 -> if (nextBoolean()) {
+            "true"
+        } else {
+            "false"
+        }
+        else -> "out of 1~3"
     }
 
     println("Android P will call $pName")
