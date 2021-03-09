@@ -53,6 +53,15 @@ private fun `pass a lambda function1`(greetingFunction: (String, Int) -> String)
     println(greetingFunction("Guyal", numBuildings))
 }
 
+private fun `parameters type inference`() {
+    val greetingFunction = { playerName: String, numBuildings: Int ->
+        val currentYear = 2018
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }
+    `pass a lambda function1`(greetingFunction)
+}
+
 fun main() {
     while(true) {
         println("======")

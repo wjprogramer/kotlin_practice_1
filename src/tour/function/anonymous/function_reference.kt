@@ -10,21 +10,25 @@ import kotlin.system.exitProcess
  * 3. 凡事出現 lambda 運算式的地方，都允許使用函數參照
  */
 
-//private fun functionReference1() {
-//    runSimulation("Guyal", ::printConstructionCost) { playerName, numBuildings ->
-//        val currentYear = 2018
-//
-//        "Welcome to SimVillage, $playerName! (copyright ${}"
-//    }
-//}
+private fun functionReference1() {
+    runSimulation("Guyal", ::printConstructionCost) { playerName, numBuildings ->
+        val currentYear = 2018
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }
+}
+
+private inline fun runSimulation(playerName: String,
+                                 costPrinter: (Int) -> Unit,
+                                 greetingFunction: (String, Int) -> String) {
+    val numBuilding = (1..3).shuffled().last()
+    costPrinter(numBuilding)
+    println(greetingFunction(playerName, numBuilding))
+}
 
 private fun printConstructionCost(numBuildings: Int) {
     val cost = 500
     println("construction cost: ${cost * numBuildings}")
-}
-
-private inline fun runSimulation(playerName: String, costPrinter: (Int) -> Unit, greetingFunction: (String, Int) -> String) {
-    val numBuilding = (1..3).shuffled().last()
 }
 
 fun main() {
@@ -35,6 +39,7 @@ fun main() {
         val option = readLine()
 
         when(option?.toInt()) {
+            1 -> functionReference1()
             else -> exitProcess(1)
         }
 
