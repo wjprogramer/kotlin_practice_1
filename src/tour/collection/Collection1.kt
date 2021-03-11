@@ -81,6 +81,12 @@ fun collection5() {
     println(list2.flatMap { it.toList() }) // [1, 2, 3, 4, 5]
 }
 
+private fun destructingList() {
+    val numbers = listOf("A1", "A2", "A3")
+    val (a, b, c) = numbers
+    println("$a, $b, $c")
+}
+
 fun main() {
     while(true) {
         print("Type number: ")
@@ -88,12 +94,13 @@ fun main() {
         if (option == null || option.isEmpty()) exitProcess(1)
         println("======")
 
-        when(option.toInt()) {
+        when(option.toIntOrNull()) {
             1 -> collection1()
             2 -> collection2()
             3 -> collection3()
             4 -> collection4()
             5 -> collection5()
+            6 -> destructingList()
             else -> exitProcess(1)
         }
 

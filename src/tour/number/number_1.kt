@@ -1,5 +1,6 @@
 package tour.number
 
+import javax.print.attribute.IntegerSyntax
 import kotlin.system.exitProcess
 
 fun number11() {
@@ -48,6 +49,16 @@ fun number13() {
     println(a)
 }
 
+private fun byteCompute() {
+    println(Integer.toBinaryString(42))
+
+    println(42.shl(2)) // 按位左移
+    println(42.shr(2))
+    println(42.inv()) // 按位取反
+    println(42.xor(33)) // 按位互斥
+    println(42.and(10)) // 按位與
+}
+
 fun main() {
     while(true) {
         print("Type number: ")
@@ -59,6 +70,7 @@ fun main() {
             1 -> number11()
             2 -> number12()
             3 -> number13()
+            4 -> byteCompute()
             else -> exitProcess(1)
         }
 
