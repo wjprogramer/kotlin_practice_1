@@ -20,7 +20,7 @@ fun main() {
         .readText()
         .run(::println)
 
-    // # let
+    // # let (it go)
     // it, return result
     listOf(1,2,3)
         .first()

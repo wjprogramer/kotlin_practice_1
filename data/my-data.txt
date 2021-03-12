@@ -1,0 +1,3 @@
+A1,123,true
+A2,124,false
+A3,125,true

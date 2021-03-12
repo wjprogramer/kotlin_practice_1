@@ -10,6 +10,11 @@ fun arrays1() {
 }
 
 fun main() {
+
+    println("int[] 在 Java 中為「基礎資料類型」，Array 在 kotlin 中是參照類型，但會被轉換成 Java 的基礎類型")
+
+    println("若沒有要與 Java 互動，在 kotlin 開發中一律使用 List")
+
     while(true) {
         print("Type number: ")
         val option = readLine()

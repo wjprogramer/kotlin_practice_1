@@ -14,6 +14,15 @@ fun for2() {
     for (index in items.indices) {
         println("item at $index is ${items[index]}")
     }
+    items.forEach { item ->
+        println(item)
+    }
+    items.forEachIndexed { index, s ->
+        println("$index. $s")
+    }
+    (1..3).forEach {
+
+    }
 }
 
 fun for3() {
