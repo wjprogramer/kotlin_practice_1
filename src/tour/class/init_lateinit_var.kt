@@ -9,6 +9,7 @@ private class B {
     }
 
     fun check() {
+        // 少用 isInitialized，不然就不要用延遲初始化
         if (::name.isInitialized) {
             println(name)
         }
