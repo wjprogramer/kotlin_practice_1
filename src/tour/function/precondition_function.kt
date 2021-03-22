@@ -24,7 +24,7 @@ fun main() {
         println("Type number:")
         val option = readLine()
 
-        when(option?.toInt()) {
+        when(option?.toIntOrNull()) {
             1 -> preconditionFunction1()
             else -> exitProcess(1)
         }
