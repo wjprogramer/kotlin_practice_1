@@ -1,4 +1,4 @@
-package tmp
+package algo_examples
 
 var res = mutableListOf<MutableList<String>>()
 
