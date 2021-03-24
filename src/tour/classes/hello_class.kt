@@ -1,4 +1,4 @@
-package tour.`class`
+package tour.classes
 
 import java.io.File
 import kotlin.system.exitProcess

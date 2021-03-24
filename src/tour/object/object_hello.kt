@@ -30,11 +30,23 @@ object Game {
     }
 }
 
-fun main() {
-    Game.play()
+// 3. 伴生物件
+// - 一個 class 只能有一個伴生物件
+// - 如果想將某個物件的初始化關聯至一個類別實例，可考慮「伴生物件」
+class WorldMap {
+    companion object {
+        private const val MAPS_FILEPATH = "nyethack.maps"
+
+        fun load() = MAPS_FILEPATH
+    }
 }
 
 private open class TownSquare {
     open fun load() = ""
+}
+
+fun main() {
+    Game.play()
+    WorldMap.load()
 }
 

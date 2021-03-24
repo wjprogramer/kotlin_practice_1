@@ -1,4 +1,4 @@
-package tour.`class`
+package tour.classes
 
 private class B {
 
