@@ -50,7 +50,7 @@ private fun `use peek`() {
 }
 
 private fun `iterate queue`() {
-    val names: Queue = LinkedList()
+    val names: Queue<String> = LinkedList()
 
     names.add("Jack")
     names.add("Adam")
