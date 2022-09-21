@@ -1,6 +1,6 @@
 package tour.function.advanced
 
-import tour.enums.enum11
+import tour.clazz.enums.enum11
 import kotlin.system.exitProcess
 
 // region 1

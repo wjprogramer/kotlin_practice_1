@@ -1,6 +1,6 @@
 package tour.function.advanced
 
-import tour.enums.*
+import tour.clazz.enums.*
 import kotlin.system.exitProcess
 
 fun main() {
